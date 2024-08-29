@@ -112,16 +112,16 @@ public class CreateNewBankAccountGUI extends JFrame implements ActionListener {
         textFieldAlias.getDocument().addDocumentListener(new SimpleDocumentListener() {
             @Override
             public void update() {
-                String currentText = textFieldAlias.getText();
                 BankingEntities selectedBank = (BankingEntities) cmbBankEntity.getSelectedItem();
 
                 if (selectedBank != null) {
+                    String currentText = textFieldAlias.getText();
                     String abbreviation = selectedBank.getAbbreviation();
 
                     if (currentText.endsWith(abbreviation)) {
-                        String userInput = currentText.replace(abbreviation, "");
+                        //String userInput = currentText.replace(abbreviation, "");
 
-                        if (ValidatorService.isValidAlias(userInput)) {
+                        if (ValidatorService.isValidAlias(currentText)) {
                             textFieldAlias.setBackground(new Color(0,120,255));
                         }
                         else {
@@ -274,7 +274,7 @@ public class CreateNewBankAccountGUI extends JFrame implements ActionListener {
                 return;
             }
 
-            if (!ValidatorService.isValidSecurityCode(alias)) {
+            if (!ValidatorService.isValidAlias(alias)) {
                 JOptionPane.showMessageDialog(this, "Invalid alias format.", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }

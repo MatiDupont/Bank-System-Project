@@ -1,5 +1,7 @@
 package ar.edu.utn.tup.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -9,26 +11,29 @@ import java.time.LocalDate;
 public class Movement {
     @Column(name = "id")
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "movementsSeq")
-    @SequenceGenerator(name = "movementsSeq", sequenceName = "MOVEMENTS_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "movementsSeq")
+    //@SequenceGenerator(name = "movementsSeq", sequenceName = "MOVEMENTS_SEQ", allocationSize = 1)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "sourceAccountId")
+    @JoinColumn(name = "source_account_id")
+    @JsonIgnore
     private BankAccount sourceAccount;
     @ManyToOne
-    @JoinColumn(name = "destinationAccountId")
+    @JoinColumn(name = "destination_account_id")
+    @JsonIgnore
     private BankAccount destinationAccount;
     @Column(name = "amount")
     private double amount;
-    @Column(name = "startDate")
+    @Column(name = "start_date")
     private LocalDate startDate;
-    @Column(name = "endDate")
+    @Column(name = "end_date")
     private LocalDate endDate;
-    @Column(name = "interestRate")
+    @Column(name = "interest_rate")
     private double interestRate;
-    @Column(name = "maturedAmount")
+    @Column(name = "matured_amount")
     private double maturedAmount;
-    @Column(name = "movementStatus")
+    @Column(name = "movement_status")
     private String status;
     @Column(name = "motive")
     private String motive;

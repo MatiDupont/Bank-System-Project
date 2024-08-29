@@ -144,20 +144,6 @@ public class AccessGUI extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == darkMode) {
-            background = new Color(18,18,18);
-            getContentPane().setBackground(background);
-            labelAdmin.setForeground(new Color(255,255,255));
-            labelCustomer.setForeground(new Color(255,255,255));
-            labelFooter.setForeground(new Color(255,255,255));
-        }
-        /*if (e.getSource() == lightMode) {
-            background = new Color(255,255,255);
-            getContentPane().setBackground(background);
-            labelAdmin.setForeground(new Color(0,0,0));
-            labelCustomer.setForeground(new Color(0,0,0));
-            labelFooter.setForeground(new Color(0,0,0));
-        }*/
         if (e.getSource() == btnCustomer) {
             this.dispose();
             CustomerGUI customerGUI = new CustomerGUI();
@@ -167,7 +153,8 @@ public class AccessGUI extends JFrame implements ActionListener {
             customerGUI.setVisible(true);
         }
         if (e.getSource() == btnAdmin) {
-            String securityCode = JOptionPane.showInputDialog(null, "Enter the bank security code:", "Access", JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Coming soon!... We are working on it at the moment.");
+            /*String securityCode = JOptionPane.showInputDialog(null, "Enter the bank security code:", "Access", JOptionPane.PLAIN_MESSAGE);
 
             if (securityCode != null && !securityCode.isEmpty()) {
                 if (securityCode.equals("codeTest")) {
@@ -184,7 +171,7 @@ public class AccessGUI extends JFrame implements ActionListener {
             }
             else {
                 JOptionPane.showMessageDialog(null, "Security code is required to proceed.", "Warning", JOptionPane.WARNING_MESSAGE);
-            }
+            }*/
         }
     }
 }

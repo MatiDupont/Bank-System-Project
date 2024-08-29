@@ -1,6 +1,7 @@
 package ar.edu.utn.tup.model;
 
 import ar.edu.utn.tup.service.BankAccountService;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "customer")
+@JsonIgnoreProperties({"bankAccounts"})
 public class Customer extends Person {
     // mappedBy = "customer" --> indica que la relacion es bidireccional y que el campo
     // 'customer' en la clase 'BankAccount' mapea esta relacion (debe ser el nombre exacto

@@ -10,15 +10,13 @@ import ar.edu.utn.tup.persistence.BankAccountDAO;
 import ar.edu.utn.tup.persistence.MovementsDAO;
 import ar.edu.utn.tup.service.BankAccountService;
 import ar.edu.utn.tup.service.MovementsService;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -28,8 +26,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@SpringBootTest
 public class MovementsServiceTest {
     @Mock
     private MovementsDAO movementsDAO;
@@ -37,7 +34,7 @@ public class MovementsServiceTest {
     @InjectMocks
     private MovementsService movementsService;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
     }

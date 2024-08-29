@@ -4,79 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7031ca14-a56f-45f6-b554-991baedc6deb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/ExchangeRateAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Investment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Movement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/BankingEntities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/CoinType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/OperationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/AdminDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/BankAccountDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/MovementsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AccessGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AccountDetailGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AdminGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CreateCustomerGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CreateNewBankAccountGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CustomerAccountsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CustomerGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CustomerLicenseGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/InvestmentGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/MovementsGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/ProfileCustomerGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/TransferMovementGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/accountDetailIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/adminIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/balanceIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/calendarIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/customerIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/deleteAccountIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/depositIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/expenses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/helpIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/homeIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/infoIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/logOutIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/logoBancario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/microphoneOffIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/microphoneOnIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/movementsIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/newAccountIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/powerOffIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/profileIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/reloadIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/revenue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/screenIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/securityIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/settingIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/transferIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/wifiIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/images/withdrawallIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/BankAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/MovementsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/ValidatorService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/BankAccountServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/CustomerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/MovementsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/ValidatorServiceTest.java" afterDir="false" />
+    <list default="true" id="7031ca14-a56f-45f6-b554-991baedc6deb" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/BankAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/MovementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/config/ValidatorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/BankAccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/BankAccountMovementsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/CustomerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/CustomerWithBankAccountDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/InvestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/MovementDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/ResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/TransactionDataDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/TransferDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/dto/WithdrawDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/AccountInactiveException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/CurrencyMismatchException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/InsufficientFundsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/InvalidFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/InvalidFixedTermException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/InvalidTransferException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/exception/UniqueConstraintViolationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/handler/CustomApiError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/handler/TupResponseEntityExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/validator/BankAccountDTOValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/validator/CustomerDTOValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/controller/validator/MovementDTOValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/repository/BankAccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/repository/MovementRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/BankAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/BankAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Investment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/AccountType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/BankingEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/BankingEntities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/CoinType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/model/enums/CoinType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/BankAccountDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/MovementsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/persistence/MovementsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AccessGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AccessGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AdminGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/AdminGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CreateNewBankAccountGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/presentation/CreateNewBankAccountGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/BankAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/BankAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/MovementsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ar/edu/utn/tup/service/MovementsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/BankAccountServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/BankAccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/CustomerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/MovementsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/MovementsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/ValidatorServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ar/edu/utn/tup/service/ValidatorServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +75,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -113,37 +102,107 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "C:/Users/Usuario/Documents/Matias/LABO3 2023/spboot-demo",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Documents/Matias/LABO3 2023/spboot_app&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Properties&quot;,
+      &quot;PLAIN_TEXT&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ar.edu.utn.tup.controller.filter" />
+      <recent name="ar.edu.utn.tup.controller.exception" />
+      <recent name="ar.edu.utn.tup.controller.validator" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup\presentation\images" />
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup" />
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup\res" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\resources" />
+      <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario" />
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup\presentation\images" />
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup\images" />
       <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\src\main\java\ar\edu\utn\tup" />
-      <recent name="C:\Users\Usuario\Documents\Matias\LABO3 2023\Sistema Bancario\res" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ar.edu.utn.tup.service" />
       <recent name="ar.edu.utn.tup.presentation" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ValidatorServiceTest">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.Application" />
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.utn.tup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankAccountServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.BankAccountServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.CustomerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovementsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BankSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.MovementsServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ValidatorServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankSystem" />
       <extension name="coverage">
@@ -155,70 +214,6 @@
       <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
       <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.ValidatorServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidatorServiceTest.testInvalidAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
-      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.ValidatorServiceTest" />
-      <option name="METHOD_NAME" value="testInvalidAlias" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidatorServiceTest.testInvalidSecurityCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
-      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.ValidatorServiceTest" />
-      <option name="METHOD_NAME" value="testInvalidSecurityCode" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidatorServiceTest.testValidAlias" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
-      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.ValidatorServiceTest" />
-      <option name="METHOD_NAME" value="testValidAlias" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidatorServiceTest.testValidSecurityCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BankSystem" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.utn.tup.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.edu.utn.tup.service" />
-      <option name="MAIN_CLASS_NAME" value="ar.edu.utn.tup.service.ValidatorServiceTest" />
-      <option name="METHOD_NAME" value="testValidSecurityCode" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -238,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.ValidatorServiceTest" />
-        <item itemvalue="JUnit.ValidatorServiceTest.testInvalidAlias" />
-        <item itemvalue="JUnit.ValidatorServiceTest.testValidAlias" />
-        <item itemvalue="JUnit.ValidatorServiceTest.testInvalidSecurityCode" />
-        <item itemvalue="JUnit.ValidatorServiceTest.testValidSecurityCode" />
+        <item itemvalue="JUnit.MovementsServiceTest" />
+        <item itemvalue="JUnit.CustomerServiceTest" />
+        <item itemvalue="JUnit.BankAccountServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -267,5 +262,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

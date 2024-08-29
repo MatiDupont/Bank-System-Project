@@ -5,26 +5,28 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public enum BankingEntities {
-    EMPTY(0, 0,0, new HashMap<>(), ""),
-    BANCO_NACION_ARGENTINA(generateEntityCode(), generateBranchCode(),175000.00, generateInterestRates(), ".bna"),
-    BANCO_PCIA_BUENOS_AIRES(generateEntityCode(), generateBranchCode(), 125000.00, generateInterestRates(), ".bpcia"),
-    BANCO_MACRO(generateEntityCode(), generateBranchCode(), 205000.00, generateInterestRates(), ".mcr"),
-    HSBC(generateEntityCode(), generateBranchCode(), 350000.00, generateInterestRates(), ".hsbc"),
-    SANTANDER_RIO(generateEntityCode(), generateBranchCode(), 300000.00, generateInterestRates(), ".sr"),
-    BBVA(generateEntityCode(), generateBranchCode(), 320000.00, generateInterestRates(), ".bbva");
+    EMPTY(0, 0,0, new HashMap<>(), "", ""),
+    BANCO_NACION_ARGENTINA(generateEntityCode(), generateBranchCode(),175000.00, generateInterestRates(), ".bna", "Banco Nacion Argentina"),
+    BANCO_PCIA_BUENOS_AIRES(generateEntityCode(), generateBranchCode(), 125000.00, generateInterestRates(), ".bpcia", "Banco Provincia Buenos Aires"),
+    BANCO_MACRO(generateEntityCode(), generateBranchCode(), 205000.00, generateInterestRates(), ".mcr", "Banco Macro"),
+    HSBC(generateEntityCode(), generateBranchCode(), 350000.00, generateInterestRates(), ".hsbc", "Banco HSBC"),
+    SANTANDER_RIO(generateEntityCode(), generateBranchCode(), 300000.00, generateInterestRates(), ".sr", "Banco Santander Rio"),
+    BBVA(generateEntityCode(), generateBranchCode(), 320000.00, generateInterestRates(), ".bbva", "Banco BBVA");
 
     private final int entityCode;
     private final int branchCode;
     private double bonusInit;
     private final Map<String, Double> interestRates;
     private final String abbreviation;
+    private final String description;
 
-    BankingEntities(int entityCode, int branchCode, double bonusInit, Map<String, Double> interestRates, String abbreviation) {
+    BankingEntities(int entityCode, int branchCode, double bonusInit, Map<String, Double> interestRates, String abbreviation, String description) {
         this.entityCode = entityCode;
         this.branchCode = branchCode;
         this.bonusInit = bonusInit;
         this.interestRates = interestRates;
         this.abbreviation = abbreviation;
+        this.description = description;
         //System.out.println("Initialized BankingEntity: " + this.name() + " with EntityCode: " + entityCode + " and BranchCode: " + branchCode);
     }
 
@@ -42,11 +44,14 @@ public enum BankingEntities {
     public String getAbbreviation() {
         return abbreviation;
     }
+    public String getDescription() {
+        return description;
+    }
 
-    @Override
+ /*   @Override
     public String toString() {
         return name().replace("_", " ");
-    }
+    }*/
 
     private static int generateEntityCode() {
         return ThreadLocalRandom.current().nextInt(100,1000);
@@ -74,5 +79,21 @@ public enum BankingEntities {
         if (exchangeRate != 1.0) {
             this.bonusInit = this.bonusInit * exchangeRate;
         }
+    }
+
+    public static BankingEntities fromDescription(String description) {
+        for (BankingEntities entity : BankingEntities.values()) {
+            if (entity.getDescription().equalsIgnoreCase(description)) {
+                return entity;
+            }
+        }
+
+        throw new IllegalArgumentException("No matching BankEntity for description: " + description);
+    }
+
+    public static BankingEntities fromUrlDescription(String urlDescription) {
+        String normalizedDescription = urlDescription.replace("-", "_").toUpperCase();
+
+        return BankingEntities.valueOf(normalizedDescription);
     }
 }

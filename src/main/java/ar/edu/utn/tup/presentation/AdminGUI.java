@@ -6,9 +6,6 @@ import java.awt.*;
 
 public class AdminGUI extends JFrame {
     private JLabel labelIcon, labelUser, labelPassword, labelFooter;
-    private JMenuBar menuBar;
-    private JMenu security, reload, setting, screen, home, logOut, help, wifi, calendar, info, microphoneOn, powerOff;
-    private JMenuItem darkMode, lightMode;
     private JTextField textFieldUser;
     private JPasswordField passwordFieldUser;
     private JButton btnSignIn;
@@ -25,80 +22,6 @@ public class AdminGUI extends JFrame {
     }
 
     private void initComponents() {
-        menuBar = new JMenuBar();
-        menuBar.setBackground(new Color(0, 120, 255));
-        setJMenuBar(menuBar);
-
-        powerOff = new JMenu();
-        powerOff.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\powerOffIcon.png"));
-        powerOff.setToolTipText("Power Off");
-        menuBar.add(powerOff);
-
-        reload = new JMenu();
-        reload.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\reloadIcon.png"));
-        reload.setToolTipText("Reload");
-        menuBar.add(reload);
-
-        home = new JMenu();
-        home.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\homeIcon.png"));
-        home.setToolTipText("Home");
-        menuBar.add(home);
-
-        wifi = new JMenu();
-        wifi.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\wifiIcon.png"));
-        wifi.setToolTipText("Wifi");
-        menuBar.add(wifi);
-
-        microphoneOn = new JMenu();
-        microphoneOn.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\microphoneOnIcon.png"));
-        microphoneOn.setToolTipText("Microphone On");
-        menuBar.add(microphoneOn);
-
-        setting = new JMenu();
-        setting.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\settingIcon.png"));
-        setting.setToolTipText("Setting");
-        menuBar.add(setting);
-
-        logOut = new JMenu();
-        logOut.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\logOutIcon.png"));
-        logOut.setToolTipText("LogOut");
-        menuBar.add(logOut);
-
-        screen = new JMenu();
-        screen.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\screenIcon.png"));
-        screen.setToolTipText("Screen");
-        menuBar.add(screen);
-
-        info = new JMenu();
-        info.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\infoIcon.png"));
-        info.setToolTipText("Info");
-        menuBar.add(info);
-
-        help = new JMenu();
-        help.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\helpIcon.png"));
-        help.setToolTipText("Help");
-        menuBar.add(help);
-
-        calendar = new JMenu();
-        calendar.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\calendarIcon.png"));
-        calendar.setToolTipText("Calendar");
-        menuBar.add(calendar);
-
-        security = new JMenu();
-        security.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\securityIcon.png"));
-        security.setToolTipText("Secure connection");
-        menuBar.add(security);
-
-        darkMode = new JMenuItem("Dark");
-        darkMode.setForeground(new Color(0, 0, 0));
-        darkMode.setFont(new Font("Tahoma", Font.BOLD, 15));
-        screen.add(darkMode);
-
-        lightMode = new JMenuItem("Light");
-        lightMode.setForeground(new Color(0, 0, 0));
-        lightMode.setFont(new Font("Tahoma", Font.BOLD, 15));
-        screen.add(lightMode);
-
         ImageIcon systemIcon = new ImageIcon("C:\\Users\\Usuario\\Documents\\Matias\\LABO3 2023\\Sistema Bancario\\src\\main\\java\\ar\\edu\\utn\\tup\\presentation\\images\\logoBancario.png");
         Icon icon = new ImageIcon(systemIcon.getImage().getScaledInstance(70, 70, Image.SCALE_DEFAULT));
         labelIcon = new JLabel(icon);

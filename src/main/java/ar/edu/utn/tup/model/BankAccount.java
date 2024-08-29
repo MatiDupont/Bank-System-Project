@@ -13,44 +13,45 @@ import java.util.List;
 import java.util.Random;
 
 @Entity
-@Table(name = "bankAccount")
+@Table(name = "bank_account")
 public class BankAccount {
     @Column(name = "id")
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bankAccountSeq")
-    @SequenceGenerator(name = "bankAccountSeq", sequenceName = "BANK_ACCOUNT_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bankAccountSeq")
+    //@SequenceGenerator(name = "bankAccountSeq", sequenceName = "BANK_ACCOUNT_SEQ", allocationSize = 1)
     private long id;
-    @Column(name = "bankingEntity")
+    @Column(name = "banking_entity")
     @Enumerated(EnumType.STRING)
     private BankingEntities bankingEntities;
     @Column(name = "cbu")
     private String CBU;
     @Column(name = "alias")
     private String alias;
-    @Column(name = "accountNumber")
+    @Column(name = "account_number")
     private String accountNumber;
-    @Column(name = "securityCode")
+    @Column(name = "security_code")
     private String securityCode;
-    @Column(name = "accountType")
+    @Column(name = "account_type")
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
     @Column(name = "balance")
     private double balance;
-    @Column(name = "openingDate")
+    @Column(name = "opening_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date openingDate;
     @Column(name = "coin")
     @Enumerated(EnumType.STRING)
     private CoinType coin;
-    @Column(name = "accountState")
+    @Column(name = "account_state")
     private boolean accountState = false;
     @ManyToOne
-    @JoinColumn(name = "customerNID")
+    @JoinColumn(name = "customer_nid")
     private Customer customer;
     @OneToMany(mappedBy = "sourceAccount", cascade = CascadeType.ALL, orphanRemoval = true)
-    private ArrayList<Movement> outgoingMovements = new ArrayList<>();
+    private List<Movement> outcomingMovements = new ArrayList<>();
     @OneToMany(mappedBy = "destinationAccount", cascade = CascadeType.ALL, orphanRemoval = true)
-    private ArrayList<Movement> incomingMovements = new ArrayList<>();
+    private List<Movement> incomingMovements = new ArrayList<>();
 
     public BankAccount() {
     }
@@ -71,18 +72,18 @@ public class BankAccount {
     }
 
     public void addOutGoingMovement(Movement movement) {
-        this.outgoingMovements.add(movement);
+        this.outcomingMovements.add(movement);
     }
 
     public void addIncomingMovement(Movement movement) {
         this.incomingMovements.add(movement);
     }
 
-    private Date convertToDateViaInstant(LocalDate dateToConvert) {
+    public Date convertToDateViaInstant(LocalDate dateToConvert) {
         return Date.from(dateToConvert.atStartOfDay(ZoneId.systemDefault()).toInstant());
     }
 
-    private String generateRandomNumber() {
+    public String generateRandomNumber() {
         Random random = new Random();
         StringBuilder accountNumber = new StringBuilder();
 
@@ -94,7 +95,7 @@ public class BankAccount {
         return accountNumber.toString();
     }
 
-    private String generateRandomCBU() {
+    public String generateRandomCBU() {
         Random random = new Random();
         StringBuilder CBU = new StringBuilder();
 
@@ -209,23 +210,23 @@ public class BankAccount {
         this.accountState = accountState;
     }
 
-    public List<Movement> getOutgoingMovements() {
-        return outgoingMovements;
+    public List<Movement> getOutcomingMovements() {
+        return outcomingMovements;
     }
 
-    public void setOutgoingMovements(ArrayList<Movement> outgoingMovements) {
-        this.outgoingMovements = outgoingMovements;
+    public void setOutcomingMovements(ArrayList<Movement> outcomingMovements) {
+        this.outcomingMovements = outcomingMovements;
     }
 
-    public ArrayList<Movement> getIncomingMovements() {
+    public List<Movement> getIncomingMovements() {
         return incomingMovements;
     }
 
-    public void setIncomingMovements(ArrayList<Movement> incomingMovements) {
+    public void setIncomingMovements(List<Movement> incomingMovements) {
         this.incomingMovements = incomingMovements;
     }
 
-    private void adjustBonusInit(BankingEntities bankingEntities, CoinType coin) {
+    public void adjustBonusInit(BankingEntities bankingEntities, CoinType coin) {
         double exchangeRate = 1.0;
 
         try {

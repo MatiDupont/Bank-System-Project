@@ -11,8 +11,9 @@ import java.util.Date;
 public class Person {
     @Column(name = "id")
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "personSeq")
-    @SequenceGenerator(name = "personSeq", sequenceName = "PERSON_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "personSeq")
+    //@SequenceGenerator(name = "personSeq", sequenceName = "PERSON_SEQ", allocationSize = 1)
     private long id;
     @Column(name = "name")
     private String name;

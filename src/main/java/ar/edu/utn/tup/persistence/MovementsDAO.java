@@ -38,7 +38,7 @@ public class MovementsDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from movement where destinationAccountId = ? and (motive = 'Transfer' or motive = 'Deposit')", Movement.class
+                    "select * from movement where destination_account_id = ? and (motive = 'Transfer' or motive = 'Deposit')", Movement.class
             );
             query.setParameter(1, bankAccountId);
             return query.getResultList();
@@ -55,7 +55,7 @@ public class MovementsDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from movement where sourceAccountId = ? and (motive = 'Transfer' or motive = 'Withdrawal')", Movement.class
+                    "select * from movement where source_account_id = ? and (motive = 'Transfer' or motive = 'Withdrawal')", Movement.class
             );
             query.setParameter(1, bankAccountId);
             return query.getResultList();
@@ -72,7 +72,7 @@ public class MovementsDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from movement where motive = 'Investment' and sourceAccountId = ?", Movement.class
+                    "select * from movement where motive = 'Investment' and source_account_id = ?", Movement.class
             );
             query.setParameter(1, bankAccountId);
             return query.getResultList();
@@ -89,7 +89,7 @@ public class MovementsDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from movement where endDate = ? and motive = 'Investment' and movementStatus = 'In progress'", Movement.class
+                    "select * from movement where end_date = ? and motive = 'Investment' and movement_status = 'In progress'", Movement.class
             );
             query.setParameter(1, today);
             return query.getResultList();

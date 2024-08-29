@@ -106,7 +106,7 @@ public class BankAccountDAO implements Serializable {
     public BankAccount findByAccountNumber(String accountNumber) {
         EntityManager em = getEntityManager();
         try {
-            Query query = em.createNativeQuery("select * from bankAccount where accountNumber = ?", BankAccount.class);
+            Query query = em.createNativeQuery("select * from bank_account where account_number = ?", BankAccount.class);
             query.setParameter(1, accountNumber);
             return (BankAccount) query.getSingleResult();
         }
@@ -144,7 +144,7 @@ public class BankAccountDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from bankAccount where customerNID = ?", BankAccount.class
+                    "select * from bank_account where customer_nid = ?", BankAccount.class
             );
             query.setParameter(1, customerId);
             return query.getResultList();
@@ -161,7 +161,7 @@ public class BankAccountDAO implements Serializable {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNativeQuery(
-                    "select * from bankAccount where cbu = ? or alias = ?", BankAccount.class
+                    "select * from bank_account where cbu = ? or alias = ?", BankAccount.class
             );
             query.setParameter(1, CBUAlias);
             query.setParameter(2, CBUAlias);
