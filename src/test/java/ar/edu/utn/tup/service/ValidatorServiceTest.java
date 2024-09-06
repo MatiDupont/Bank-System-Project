@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@SpringBootTest(properties = {"spring.jpa.hibernate.ddl-auto=none"})
 public class ValidatorServiceTest {
     @Test
     @DisplayName("Test for validating valid NID´s.")

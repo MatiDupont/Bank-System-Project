@@ -18,7 +18,7 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@SpringBootTest(properties = {"spring.jpa.hibernate.ddl-auto=none"})
 public class CustomerServiceTest {
     @Mock
     private CustomerDAO customerDAO;

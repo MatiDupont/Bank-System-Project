@@ -26,10 +26,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@SpringBootTest(properties = {"spring.jpa.hibernate.ddl-auto=none"})
 public class MovementsServiceTest {
     @Mock
     private MovementsDAO movementsDAO;
+    @Mock
+    private BankAccountService bankAccountService;
 
     @InjectMocks
     private MovementsService movementsService;
@@ -60,6 +62,7 @@ public class MovementsServiceTest {
         double expectedBalanceSourceAccount = sourceAccount.getBalance() - amount;
         double expectedBalanceDestinationAccount = destinationAccount.getBalance() + amount;
 
+        doNothing().when(bankAccountService).update(any(BankAccount.class));
         doNothing().when(movementsDAO).create(any(Movement.class));
 
         int result = movementsService.makeABankTransfer(sourceAccount, destinationAccount, date, amount);
@@ -68,6 +71,7 @@ public class MovementsServiceTest {
         assertEquals(expectedBalanceDestinationAccount, destinationAccount.getBalance());
         assertEquals(1, result);
 
+        verify(bankAccountService, times(2)).update(any(BankAccount.class));
         verify(movementsDAO, times(1)).create(any(Movement.class));
     }
 
@@ -158,6 +162,7 @@ public class MovementsServiceTest {
         double amount = 50;
         double expectedBalance = bankAccount.getBalance() - amount;
 
+        doNothing().when(bankAccountService).update(any(BankAccount.class));
         doNothing().when(movementsDAO).create(any(Movement.class));
 
         boolean result = movementsService.withdraw(bankAccount, amount);
@@ -165,6 +170,7 @@ public class MovementsServiceTest {
         assertTrue(result);
         assertEquals(expectedBalance, bankAccount.getBalance());
 
+        verify(bankAccountService, times(1)).update(any(BankAccount.class));
         verify(movementsDAO, times(1)).create(any(Movement.class));
     }
 
@@ -199,6 +205,7 @@ public class MovementsServiceTest {
         LocalDate endDate = LocalDate.now();
         double expectedBalance = bankAccount.getBalance() - amount;
 
+        doNothing().when(bankAccountService).update(any(BankAccount.class));
         doNothing().when(movementsDAO).create(any(Movement.class));
 
         boolean result = movementsService.invest(bankAccount, amount, interestRate, startDate, endDate);
@@ -206,6 +213,7 @@ public class MovementsServiceTest {
         assertEquals(expectedBalance, bankAccount.getBalance());
         assertTrue(result);
 
+        verify(bankAccountService, times(1)).update(any(BankAccount.class));
         verify(movementsDAO, times(1)).create(any(Movement.class));
     }
 
@@ -256,6 +264,7 @@ public class MovementsServiceTest {
         LocalDate today = LocalDate.now();
 
         when(movementsDAO.findMaturedInvestments(today)).thenReturn(maturedInvestments);
+        doNothing().when(bankAccountService).update(any(BankAccount.class));
         doNothing().when(movementsDAO).update(any(Movement.class));
 
         movementsService.checkMaturedInvestments();
@@ -265,6 +274,7 @@ public class MovementsServiceTest {
         assertEquals(expectedMaturedAmount2, maturedInvestment2.getDestinationAccount().getBalance());
         assertEquals("Completed", maturedInvestment2.getStatus());
 
+        verify(bankAccountService, times(2)).update(any(BankAccount.class));
         verify(movementsDAO, times(1)).findMaturedInvestments(today);
         verify(movementsDAO, times(2)).update(any(Movement.class));
     }
@@ -281,12 +291,14 @@ public class MovementsServiceTest {
         double amount = 120000;
         double expectedBalance = bankAccount.getBalance() + amount;
 
+        doNothing().when(bankAccountService).update(any(BankAccount.class));
         doNothing().when(movementsDAO).create(any(Movement.class));
 
         movementsService.deposit(bankAccount, amount);
 
         assertEquals(expectedBalance, bankAccount.getBalance());
 
+        verify(bankAccountService, times(1)).update(any(BankAccount.class));
         verify(movementsDAO, times(1)).create(any(Movement.class));
     }
 

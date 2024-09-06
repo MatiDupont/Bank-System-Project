@@ -14,6 +14,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,7 +23,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest
+@SpringBootTest(properties = {"spring.jpa.hibernate.ddl-auto=none"})
 public class BankAccountServiceTest {
     @Mock
     private BankAccountDAO bankAccountDAO;
